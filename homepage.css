@@ -1,0 +1,138 @@
+/* Body
+-------------------------------------------------------------- */
+
+body {
+	background-color: #ddeeff;
+	color: #000;
+	font-size: 75%;
+	font-family: verdana, tahoma, sans-serif;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+/* Fonts
+-------------------------------------------------------------- */
+
+h1, h2 {
+	font-family: "helvetica neue", arial, sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+	font-weight: bold;
+	margin: 0px;
+}
+
+h2 {
+  font-size: 1em;
+  margin: 0px;
+}
+
+h1 a, h2 a {
+	color: #000;
+  border-bottom: none;
+}
+
+p {
+	margin: 1.5em 0px;
+}
+
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #036;
+	border-bottom: 1px dotted #9ce;
+}
+
+/* Layout
+-------------------------------------------------------------- */
+
+#box {
+	margin: 100px auto 0px;
+	width: 325px;
+	padding: 36px 36px;
+	text-align: left;
+	background: #fff;
+	border-bottom: 2px solid #abc;
+	border-right: 2px solid #abc;
+	overflow: hidden;
+	position: relative;
+}
+
+/* Controls
+-------------------------------------------------------------- */
+
+.buttons ul {
+	overflow: hidden;
+}
+
+.buttons li {
+  display: inline;
+}
+
+.buttons li a {
+	color: #555;
+	border: none;
+}
+
+.buttons li a:focus {
+  outline: none;
+}
+
+.buttons li a.activeSlide {
+  text-decoration: underline;
+}
+
+/* hCard
+-------------------------------------------------------------- */
+
+.type {
+	display: none;
+}
+
+
+/* Utilities
+-------------------------------------------------------------- */
+
+.hidden {
+	display: none;
+}
+
+/* Slides
+-------------------------------------------------------------- */
+
+#slideshow-nav {
+  margin: 1.5em 0;
+}
+
+#slideshow {
+  width: 325px;
+  overflow: hidden;
+}
+
+#slideshow .slide {
+  width: 325px;
+}
+
+#elsewhere li {
+	display: inline;
+	margin-right: .5em;
+}
+
+#slideshow p {
+  margin: 0;
+}
+
+#slideshow p, #slideshow li {
+  color: #555;
+}

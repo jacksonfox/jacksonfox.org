@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Jackson Fox</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css" />
+	<link rel="stylesheet" type="text/css" href="jcarousel.css" />
+	<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="jquery.cycle.min.js" type="text/javascript"></script>
+	<script src="jquery.cycle.trans.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+    $('#slideshow-frame').cycle({
+      timeout: 0,
+      fx: 'scrollHorz',
+      pager: '#slideshow-nav',
+      pagerAnchorBuilder: function(index, slide) {
+       return '#slideshow-nav li:eq(' + index + ') a'; 
+      } 
+    });
+	});
+	</script>
+</head>
+<body>
+<div id="box">
+	<div id="calling-card" class="vcard">
+		<h1><a href="http://jacksonfox.org" class="url fn">Jackson Fox</a></h1>
+		<p><span class="title">Interaction designer, student, all around web geek</span></p>
+		<ul>
+			<li class="adr"><span class="locality">Durham</span>, <span class="region">NC</span></li>
+			<li><a class="email" href="mailto:jacksonfox@gmail.com"><span class="type">personal</span><span class="value">jacksonfox@gmail.com</span></a></li>
+			<li><a class="tel" href="tel:1-919-423-4798"><span class="type">cell</span><span class="value">(919) 423-4798</span></a></li>
+		</ul>
+	</div>
+	<div id="slideshow" class="">
+  	<div id="slideshow-tabs" class="buttons">
+  		<ul id="slideshow-nav">
+  			<li><a href="#">Projects</a> &rarr;</li>
+  			<li><a href="#">Elsewhere</a> &rarr;</li>
+  			<li><a href="#">About</a></li>
+  		</ul>
+  	</div>
+		<div id="slideshow-frame">
+		  <div id="projects" class="slide">
+		    <h2>Some of My Current Projects</h2>
+		    <ul>
+		      <li><a href="http://hamsterbot.com">HamsterBot</a> is a collection of interesting things</li>
+		      <li><a href="http://welovecotton.com">We Love Cotton</a> is a very humble t-shirt blog</li>
+		      <li><a href="http://encourage.ruzuku.com">Get Encouraged</a> lets you share encouraging quotes</li>
+		      <li><a href="http://connectasketch.com">Connect-A-Sketch</a> is coming soon</li>
+		    </ul>
+		  </div>
+			<div id="elsewhere" class="slide">
+			  <h2>Other Place You Can Find Me</h2>
+				<ul>
+					<li><a rel="me" href="http://del.icio.us/jacksonfox">Delicious</a></li>
+					<li><a rel="me" href="http://twitter.com/jacksonfox">Twitter</a></li>
+				</ul>
+				<ul>	
+					<li><a rel="me" href="http://www.flickr.com/photos/jacksonfox/">Flickr</a></li> 
+					<li><a rel="me" href="http://www.last.fm/user/jacksonfox/">Last.fm</a></li>
+					<li><a rel="me" href="http://zeppox.net">My Weblog</a></li>
+				</ul>
+				<ul>
+					<li><a rel="me" href="http://www.linkedin.com/in/jacksonfox">LinkedIn</a></li>
+					<li><a rel="me" href="http://www.facebook.com/profile.php?id=2710409">Facebook</a></li>
+				</ul>
+			</div>
+			<div id="about" class="slide">
+			  <h2>A Little Bit About Me</h2>
+				<p>Jackson Fox leads a secret double life &mdash; mild mannered user experience design at <a href="http://viget.com">Viget Labs</a> by day, graduate student in <a href="http://sils.unc.edu">information science</a> by night. Jackson has been making the web easier to use since 1997.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	// var pageTracker = _gat._getTracker("UA-99790-2");
+	// pageTracker._initData();
+	// pageTracker._trackPageview();
+</script>
+</body>
+</html>
