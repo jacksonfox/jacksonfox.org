@@ -15,21 +15,24 @@ body {
 
 h1, h2 {
 	font-family: "helvetica neue", arial, sans-serif;
+  color: #333;
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 3em;
 	font-weight: bold;
-	margin: 0px;
+	margin: 0px;   
+	font-family: "museo-1","museo-2";
 }
 
 h2 {
-  font-size: 1em;
-  margin: 0px;
+  font-size: 1.167em;   
+  font-weight: normal;
+  margin: 0px 0px 1em;
 }
 
 h1 a, h2 a {
-	color: #000;
+	color: #333;
   border-bottom: none;
 }
 
@@ -63,17 +66,22 @@ a {
 	padding: 36px 36px;
 	text-align: left;
 	background: #fff;
-	border-bottom: 2px solid #abc;
-	border-right: 2px solid #abc;
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+	position: relative;   
+	-webkit-box-shadow: 1px 1px 5px #999;
+	-moz-box-shadow: 1px 1px 5px #999;
+	box-shadow: 1px 1px 5px #999;
+} 
+
+p.title {
+  margin-top: 1em;
+  color: #777;
 }
 
 /* Controls
 -------------------------------------------------------------- */
 
 .buttons ul {
-	overflow: hidden;
 }
 
 .buttons li {
@@ -81,8 +89,18 @@ a {
 }
 
 .buttons li a {
+  display: inline-block;  
+  position: relative;     
 	color: #555;
 	border: none;
+  background: #eee;
+  padding: 2px;
+	width: 72px;
+	text-align: center;     
+	font-size: .83em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .buttons li a:focus {
@@ -90,7 +108,24 @@ a {
 }
 
 .buttons li a.activeSlide {
-  text-decoration: underline;
+  background-color: #369;
+  color: #fff;    
+  text-shadow:1px 1px 0px #555
+}   
+
+/* Silly Arrow Decoration */
+
+a.activeSlide:after {
+	content: "\00a0";
+	display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+	bottom: -8px; /* value = - border-top-width - border-bottom-width */
+	left: 34px; /* controls horizontal position */
+	width: 0;
+	height: 0;
+	border-width: 4px 4px; /* vary these values to change the angle of the vertex */
+	border-style: solid;
+	border-color: #369 transparent transparent; 
 }
 
 /* hCard
@@ -106,6 +141,12 @@ a {
 
 .hidden {
 	display: none;
+}  
+
+p span.amp {
+  font-family: Baskerville, 'Goudy Old Style', 'Book Antiqua', 'Palatino Linotype', 'Times New Roman', serif;
+  font-size: 1.4em;
+  color: #555;
 }
 
 /* Slides
@@ -122,11 +163,6 @@ a {
 
 #slideshow .slide {
   width: 325px;
-}
-
-#elsewhere li {
-	display: inline;
-	margin-right: .5em;
 }
 
 #slideshow p {

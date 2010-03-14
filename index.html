@@ -9,27 +9,52 @@
 	<link rel="stylesheet" type="text/css" href="jcarousel.css" />
 	<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
 	<script src="jquery.cycle.min.js" type="text/javascript"></script>
-	<script src="jquery.cycle.trans.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
+	<script src="jquery.cycle.trans.min.js" type="text/javascript"></script>   
+	<script type="text/javascript" src="http://use.typekit.com/sea3tma.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script type="text/javascript">      
+	function pageAnchor() {
+	  document.location.hash = this.id;
+	}
+	function getSlideFromURL() {
+	  if (document.location.hash) {
+	    return $('.slide').index($(document.location.hash))
+	  } else {
+	    return 0;
+	  }
+	}
 	$(document).ready(function(){
     $('#slideshow-frame').cycle({
       timeout: 0,
-      fx: 'scrollHorz',
+      fx: 'scrollHorz', 
+      speed: 400,
       pager: '#slideshow-nav',
       pagerAnchorBuilder: function(index, slide) {
-       return '#slideshow-nav li:eq(' + index + ') a'; 
-      } 
+       return '#slideshow-nav li:eq(' + index + ')'; 
+      },
+      after: pageAnchor,
+      startingSlide: getSlideFromURL() 
     });
 	});
 	</script>
 </head>
-<body>
+<body>    
+<!--
+Todo List:
+- Fix up spacing and line-heights
+- Add a little color
+
+Thanks:
+- TypeKit (http://typekit.com) & exljbris (http://www.josbuivenga.demon.nl/) for Museo
+- Cycle plugin for jQuery (http://malsup.com/jquery/cycle/)
+- Nicolas Gallagher for little triangle thingy (http://nicolasgallagher.com/demo/pure-css-speech-bubbles/bubbles.html)
+-->
 <div id="box">
 	<div id="calling-card" class="vcard">
 		<h1><a href="http://jacksonfox.org" class="url fn">Jackson Fox</a></h1>
-		<p><span class="title">Interaction designer, student, all around web geek</span></p>
+		<p class="title">Interaction designer <span class="amp">&amp;</span> Web Nerd</p>
 		<ul>
-			<li class="adr"><span class="locality">Durham</span>, <span class="region">NC</span></li>
+			<li class="adr"><span class="locality">Baton Rouge</span>, <span class="region">LA</span></li>
 			<li><a class="email" href="mailto:jacksonfox@gmail.com"><span class="type">personal</span><span class="value">jacksonfox@gmail.com</span></a></li>
 			<li><a class="tel" href="tel:1-919-423-4798"><span class="type">cell</span><span class="value">(919) 423-4798</span></a></li>
 		</ul>
@@ -37,40 +62,36 @@
 	<div id="slideshow" class="">
   	<div id="slideshow-tabs" class="buttons">
   		<ul id="slideshow-nav">
-  			<li><a href="#">Projects</a> &rarr;</li>
-  			<li><a href="#">Elsewhere</a> &rarr;</li>
-  			<li><a href="#">About</a></li>
+  			<li><a href="#projects">Projects</a></li>
+  			<li><a href="#elsewhere">Elsewhere</a></li>
+  			<li><a href="#about">About</a></li>
   		</ul>
   	</div>
 		<div id="slideshow-frame">
 		  <div id="projects" class="slide">
 		    <h2>Some of My Current Projects</h2>
 		    <ul>
-		      <li><a href="http://hamsterbot.com">HamsterBot</a> is a collection of interesting things</li>
-		      <li><a href="http://welovecotton.com">We Love Cotton</a> is a very humble t-shirt blog</li>
-		      <li><a href="http://encourage.ruzuku.com">Get Encouraged</a> lets you share encouraging quotes</li>
-		      <li><a href="http://connectasketch.com">Connect-A-Sketch</a> is coming soon</li>
+		      <li><a href="http://ruzuku.com">Ruzuku</a> helps build learning communities</li>
+		      <li><a href="http://blog.morebetterlabs.com">More Better Blog</a> is a smorgasbord of UX stuff</li>
+		      <li><a rel="me" href="http://hamsterbot.com">HamsterBot</a> is a collection of interesting things</li>
+		      <li><a rel="me" href="http://welovecotton.com">We Love Cotton</a> is a very humble t-shirt blog</li>
+		      <li><a href="http://connectasketch.com">Connect-A-Sketch</a> turns sketches into prototypes</li>
 		    </ul>
 		  </div>
 			<div id="elsewhere" class="slide">
-			  <h2>Other Place You Can Find Me</h2>
+			  <h2>Other Places You Can Find Me</h2>
 				<ul>
-					<li><a rel="me" href="http://del.icio.us/jacksonfox">Delicious</a></li>
-					<li><a rel="me" href="http://twitter.com/jacksonfox">Twitter</a></li>
-				</ul>
-				<ul>	
-					<li><a rel="me" href="http://www.flickr.com/photos/jacksonfox/">Flickr</a></li> 
-					<li><a rel="me" href="http://www.last.fm/user/jacksonfox/">Last.fm</a></li>
-					<li><a rel="me" href="http://zeppox.net">My Weblog</a></li>
-				</ul>
-				<ul>
-					<li><a rel="me" href="http://www.linkedin.com/in/jacksonfox">LinkedIn</a></li>
-					<li><a rel="me" href="http://www.facebook.com/profile.php?id=2710409">Facebook</a></li>
+					<li><a rel="me" href="http://del.icio.us/jacksonfox">Delicious</a> has links and bookmarks</li>
+					<li><a rel="me" href="http://twitter.com/jacksonfox">Twitter</a> is where I complain about things</li>
+					<li><a rel="me" href="http://www.flickr.com/photos/jacksonfox/">Flickr</a> has some photos</li> 
+					<li><a rel="me" href="http://www.last.fm/user/jacksonfox/">Last.fm</a> tracks the music I listen to</li>
+					<li><a rel="me" href="http://zeppox.net">My Weblog</a> is infrequently updated</li>
+					<li><a rel="me" href="http://www.linkedin.com/in/jacksonfox">LinkedIn</a> has my resume</li>
 				</ul>
 			</div>
 			<div id="about" class="slide">
 			  <h2>A Little Bit About Me</h2>
-				<p>Jackson Fox leads a secret double life &mdash; mild mannered user experience design at <a href="http://viget.com">Viget Labs</a> by day, graduate student in <a href="http://sils.unc.edu">information science</a> by night. Jackson has been making the web easier to use since 1997.</p>
+				<p>Jackson Fox is Principal Interaction Designer at <a href="http://morebetterlabs.com">More Better Labs</a>, a distributed user experience consultancy. He has an MS in Information Science from <a href="http://sils.unc.edu">UNC Chapel Hill</a>, where he studied the psychology of HCI and social interaction design. Jackson resides in Baton Rouge, LA.</p>
 			</div>
 		</div>
 	</div>
