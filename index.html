@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">        
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jackson Fox is Principal Interaction Designer at More Better Labs, makers of Ruzuku.com. He has an MS in Information Science from UNC Chapel Hill, where he studied the psychology of HCI and social interaction design. Jackson resides in Baton Rouge, LA.">
+	<title>Jackson Fox: Interaction Designer & Web Nerd</title>
+	<link rel="stylesheet/less" href="css/styles.less" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Permanent+Marker" type="text/css">
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]--> 
+  <script src="http://use.typekit.com/sal3otp.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>                                                                  
+  <div id="wrapper">
+    <header class="vcard">
+      <h1 id="logo"><a href="/" rel="home" class="url fn">Jackson Fox</a></h1> 
+      <p class="tagline title">Interaction Designer <span class="amp">&amp;</span> Web Nerd</p>
+      <div id="about">
+        <p>Jackson Fox is the lead designer for <a href="http://morebetterlabs.com">More Better Labs</a> and <a href="http://ruzuku.com">Ruzuku.com</a>. He has an MS in Information Science from <a href="http://sils.unc.edu">UNC Chapel Hill</a>, where he studied the psychology of HCI and social interaction design.</p>
+      </div>
+      <ul class="contact-info">
+  			<li class="adr"><span class="locality">Baton Rouge</span>, <span class="region">LA</span></li>
+  			<li><a class="email" href="mailto:jacksonfox@gmail.com"><span class="type hide">personal</span><span class="value">jacksonfox@gmail.com</span></a></li>
+  			<li><a class="tel" href="tel:1-919-423-4798"><span class="type hide">cell</span><span class="value">(919) 423-4798</span></a></li>
+  		</ul>
+    </header>
+    <div id="body">
+	    <section id="currently">
+  <h2>Currently</h2>
+  <ul>
+    <li><a href="http://ruzuku.com">Ruzuku</a> helps build learning communities</li>
+    <li><a href="http://blog.morebetterlabs.com">More Better Blog</a> is a smorgasbord of UX stuff</li>
+    <li><a rel="me" href="http://hamsterbot.com">Hamsterbot</a> is a collection of interesting things</li>
+    <li><a rel="me" href="http://welovecotton.com">We Love Cotton</a> is a very humble t-shirt blog</li>
+    <li><a rel="me" href="http://thestovetop.tumblr.com">The Stove Top</a> is a cooking journal with occasional recipes</li>
+    <li><a rel="me" href="http://cowboyninja.com">Cowboy Ninja</a> is a new blog-ish thing</li>
+    <li><a rel="me" href="http://foodfromtrucks.com">Food from Trucks</a> profiles food trucks in Baton Rouge</li>
+  </ul>
+</section>
+<section id="previously">
+  <h2>Previously</h2>
+  <ul>
+    <li><a href="http://connectasketch.com">Connect-A-Sketch</a> turns sketches into prototypes</li>
+		<li><a rel="me" href="http://zeppox.net">My old weblog</a> is sleeping</li>
+  </ul>
+</section>
+<section id="elsewhere">
+  <h2>Elsewhere</h2>
+	<ul>
+		<li><a rel="me" href="http://del.icio.us/jacksonfox">Delicious</a> has links and bookmarks</li>
+		<li><a rel="me" href="http://twitter.com/jacksonfox">Twitter</a> is where I complain about things</li>
+		<li><a rel="me" href="http://www.flickr.com/photos/jacksonfox/">Flickr</a> has some photos</li> 
+		<li><a rel="me" href="http://www.last.fm/user/jacksonfox/">Last.fm</a> tracks the music I listen to</li>
+		<li><a rel="me" href="http://www.linkedin.com/in/jacksonfox">LinkedIn</a> has my resume</li>
+		<li><a rel="me" href="https://plus.google.com/109042025449486184498?rel=author">Google+</a> for sharing stuff I read</a>
+	</ul>
+</section>
+
+	  </div>
+	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="lib/less.js"></script>
+  <script src="lib/masonry.js"></script>
+  <script src="lib/plugins.js"></script>
+  <script>
+  function useMasonry() {
+    var width = $('body').width();
+    var masonry = true;
+    if (width <= 600) {
+      masonry = false;
+    }
+    return masonry;
+  }
+  function columnWidth($container,columns) {
+    var columnWidth = $container.width() / columns;
+    return columnWidth;
+  }
+  function layout() {
+    var $container = $('#body');
+    var $wrapper = $('#wrapper');
+    if (useMasonry()) {
+      $container.masonry({
+        itemSelector : 'section',
+        columnWidth : columnWidth($container,2)
+      });         
+      $wrapper.vertical_center(); 
+    }
+  }
+  $(window).resize(function(){
+    layout();
+  }).resize();    
+  </script>
+</body>
+</html>
