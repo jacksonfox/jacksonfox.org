@@ -2,8 +2,6 @@
 
 Site source files for my homepage at [http://jacksonfox.org](http://jacksonfox.org).
 
-----
-
 ##Credits
 
 * [Less CSS](http://lesscss.org)
