@@ -26,7 +26,7 @@ html {
 }
 body {
   font-family: menlo, monospace;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 18px;  
   color: #333333;
   background: #ffffff;
@@ -57,7 +57,7 @@ header {
   h1 {
     margin: 0 0 18px 0;
     font-size: 36px;
-    line-height: 36px;
+    line-height: 42px;
     text-transform: uppercase;
     font-family: "Permanent Marker";
     a {
@@ -67,7 +67,7 @@ header {
     }
   }
   p.tagline { 
-    font-size: 11px;
+    font-size: 12px;
     line-height: 18px;
     color: #aaaaaa;        
     margin-bottom: 0px;
@@ -99,41 +99,15 @@ section {
 /* Layout 
  ------------------------------------------------------------ */
 
-@media only screen and (min-width: 700px) {
-  #wrapper {
-    width: 80%;
-    background: #fff;
-    overflow: hidden;
-    position: absolute;
-    left: 10%;
-  }  
-  header {
-    float: left;
-    width: 30%;
-    padding-right: 3%;
-  }
-  #body {
-    float: left;
-    width: 66%;
-    section {
-      float: left;
-      width: 47%;
-      padding-right: 3%;
-    }
-  }
-}
-
-@media only screen and (max-width: 699px) {
-  #wrapper {
-    width: 90%;
-    margin: 20px auto;
-    background: #fff;
-    overflow: hidden;
-  }  
-  
-  header {
-    margin-bottom: 18px;
-  }
+#wrapper {
+  width: 80%;
+  max-width: 450px;
+  background: #fff;
+  position: absolute;
+  left: 10%;
+}  
+header {
+  margin-bottom: 18px;
 }
 
 /* Utility 
