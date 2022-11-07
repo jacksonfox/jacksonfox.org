@@ -1,143 +1,61 @@
-/* Reset Styles 
- ------------------------------------------------------------ */
-body,
-html,
-img,
-form,
-fieldset,
-input,
-textarea,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-ul,
-li,
-div {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  font-size: 100%;
-  outline: none;
-  border: none;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
-audio,
-canvas,
-video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-audio:not([controls]) {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
-/* Base Styles 
- ------------------------------------------------------------ */
 html {
-  font-size: 100%;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+	font-size: 100%;
 }
+
+html, body {
+	height: 100%;
+}
+
 body {
-  font-family: menlo, monospace;
-  font-size: 12px;
-  line-height: 18px;
-  color: #333333;
-  background: #ffffff;
+	background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+	color: #333333;
+	display: flex;
+	flex-direction: column;
+	font-family: menlo, monospace;
+	font-weight: 100;
+	line-height: 1.5rem;
 }
-h1,
-h2,
-h3,
-h4 {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: bold;
-  font-family: menlo, monospace;
-  margin: 18px 0px;
-  color: #000000;
+
+h2, h3, h4 {
+	font-family: poppins, menlo, monospace;
+	font-weight: normal;
 }
-p {
-  margin-bottom: 10px;
-}
-a {
-  color: #003366;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 1px dotted #99ccee;
-}
-a:hover {
-  background-color: #ddeeff;
-}
-/* Header 
- ------------------------------------------------------------ */
-header h1 {
-  margin: 0 0 18px 0;
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: uppercase;
-  font-family: "Permanent Marker";
-}
-header h1 a {
-  border: none;
-  color: #333333;
-  background-color: #fff;
-}
-header p.tagline {
-  font-size: 12px;
-  line-height: 18px;
-  color: #aaaaaa;
-  margin-bottom: 0px;
-}
-#about {
-  margin-top: 18px;
-}
-/* Body
- ------------------------------------------------------------ */
-#body li {
-  list-style-type: none;
-}
-#body h2 {
-  background-color: #eee;
-  display: inline-block;
-  margin-top: 0px;
-}
-section {
-  margin-bottom: 18px;
-}
-/* Layout 
- ------------------------------------------------------------ */
+
 #wrapper {
-  width: 80%;
-  max-width: 450px;
-  background: #fff;
-  position: absolute;
-  left: 10%;
+	background: #fff;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	font-size: .9rem;
+	margin: .5rem;
 }
+
+header, #body {
+	margin: auto;
+	width: 90%;
+	max-width: 500px;
+}
+
+#body {
+	margin-top: 0;
+}
+
 header {
-  margin-bottom: 18px;
+	margin-bottom: 0;
 }
-/* Utility 
- ------------------------------------------------------------ */
-.hide {
-  display: none;
+
+h1 {
+	font-family: "Permanent Marker";
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+.highlighter {
+	/* background-color: pink; */
+	border-bottom: 4px solid pink;
 }
