@@ -59,3 +59,18 @@ h2 {
 	/* background-color: pink; */
 	border-bottom: 4px solid pink;
 }
+
+@media only screen and (max-width: 450px) {
+	header, #body {
+		width: 80%;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+	ul {
+		padding-left: 1rem;
+	}
+}
